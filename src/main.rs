@@ -12,6 +12,8 @@ fn main() {
     test_for();
 
     test_if_else();
+
+    test_loop();
 }
 
 fn test_match(x: i32) {
@@ -72,4 +74,18 @@ fn test_if_else() {
         0
     };
     println!("number: {}", number);
+}
+
+fn test_loop() {
+    let mut counter = 0;
+    println!("loop는 무한루프");
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            counter = 20;
+            break "counter가 10이 되었다.";
+        }
+    };
+    println!("result: {}", result);
+    println!("counter: {}", counter);
 }

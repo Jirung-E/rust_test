@@ -14,6 +14,8 @@ fn main() {
     test_if_else();
 
     test_loop();
+    test_while();
+    test_for_array();
 }
 
 fn test_match(x: i32) {
@@ -88,4 +90,33 @@ fn test_loop() {
     };
     println!("result: {}", result);
     println!("counter: {}", counter);
+}
+
+fn test_while() {
+    let mut number = 3;
+    while number != 0 {
+        println!("{}!", number);
+        number -= 1;
+    }
+    println!("while 루프를 벗어남");
+}
+
+fn test_for_array() {
+    let mut a = [10, 20, 30, 40, 50];
+    println!("a: {:?}", a);     // ?
+    println!("a: {:#?}", a);    // ??
+    println!("배열을 순회.");
+    for e in a.iter() {
+        println!("the value is: {}", e);
+    }
+    println!("반대로 돌수도 있다.");
+    for e in a.iter().rev() {
+        println!("rev: {}", e);
+    }
+
+    println!("배열의 내용을 바꿀수도 있다.");
+    for e in a.iter_mut() {
+        *e += 1;
+    }
+    println!("a: {:?}", a);
 }

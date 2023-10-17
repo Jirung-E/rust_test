@@ -100,3 +100,7 @@ pub fn test_for_array() {
     }
     println!("a: {:?}", a);
 }
+
+pub fn test_remainder() {
+    println!("실수 나머지 연산도 지원한다: 31.3 % 2.1 = {}", 31.3 % 2.1);
+}

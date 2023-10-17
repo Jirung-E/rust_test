@@ -9,6 +9,8 @@ fn main() {
 
     println!("{} + {} = {}", x, y, test_func(10, 2));
 
+    test_remainder();
+
     x = 10;
     test_match(x);
 

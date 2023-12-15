@@ -1,24 +1,21 @@
-mod test;
-use test::*;
-
 fn main() {
-    println!("함수 선언을 아래쪽에 해도 된다.");
+    test_ownership();
+}
 
-    let mut x = 10;
-    let y = 2;
 
-    println!("{} + {} = {}", x, y, test_func(10, 2));
+fn test_ownership() {
+    let s = String::from("hello");
+    takes_ownership(s);
+    // println!("{}", s); // error: value borrowed here after move
+    let x = 5;
+    makes_copy(x);
+    println!("{}", x);
+}
 
-    test_remainder();
+fn takes_ownership(some_string: String) {
+    println!("{}", some_string);
+}
 
-    x = 10;
-    test_match(x);
-
-    test_for();
-
-    test_if_else();
-
-    test_loop();
-    test_while();
-    test_for_array();
+fn makes_copy(some_integer: i32) {
+    println!("{}", some_integer);
 }

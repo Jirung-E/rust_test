@@ -5,6 +5,22 @@ pub fn test() {
     test_option();
     println!();
     test_match();
+    println!();
+    test_if_let();
+}
+
+fn test_if_let() {
+    let some_u8_value = Some(3u8);
+    match some_u8_value {
+        Some(3) => println!("three"),
+        _ => {}
+    }
+    println!("value: {:?}", some_u8_value.unwrap());
+    if let Some(3) = some_u8_value {
+        println!("three");
+    }
+    println!("value: {:?}", some_u8_value.unwrap());
+    println!("가독성이 구리니까 쓰지 말자");
 }
 
 fn test_match() {

@@ -3,6 +3,52 @@ pub fn test() {
     test_message();
     println!();
     test_option();
+    println!();
+    test_match();
+}
+
+fn test_match() {
+    println!("{}", value_in_cents(Coin::Penny));
+    println!("{}", value_in_cents(Coin::Nickel));
+    println!("{}", value_in_cents(Coin::Dime));
+    println!("{}", value_in_cents(Coin::Quarter(UsState::Alabama)));
+    println!("{}", value_in_cents(Coin::Quarter(UsState::Alaska)));
+
+    let number: u8 = 3;
+    match number {
+        1 => println!("one"),
+        2 => println!("two"),
+        3 => println!("three"),
+        _ => {}
+    }
+}
+
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+fn value_in_cents(coin: Coin) -> u32 {
+    match coin {
+        Coin::Penny => {
+            println!("Lucky penny!");
+            1
+        },
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}!", state);
+            25
+        }
+    }
 }
 
 fn test_option() {
@@ -16,6 +62,19 @@ fn test_option() {
     println!("some_string: {}", some_string.unwrap());
     let n = 10;
     println!("n + some_number: {}", n + some_number.unwrap());
+
+    let some_number = plus_one(some_number);
+    println!("some_number + 1: {:?}", some_number.unwrap());
+
+    let none = plus_one(None);
+    println!("none + 1: {:?}", none);
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(x) => Some(x + 1)
+    }
 }
 
 fn test_message() {

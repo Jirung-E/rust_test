@@ -1,4 +1,5 @@
 pub fn test() {
+    println!("[struct test]");
     test_user();
     println!();
     test_menu();

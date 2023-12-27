@@ -8,5 +8,5 @@ Book:
 - [x] reference
 - [x] slice
 - [x] struct
-- [ ] enum
-- [ ] pattern matching
+- [x] enum
+- [x] pattern matching

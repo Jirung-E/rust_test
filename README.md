@@ -7,6 +7,6 @@ Book:
 - [x] ownership
 - [x] reference
 - [x] slice
-- [ ] struct
+- [x] struct
 - [ ] enum
 - [ ] pattern matching

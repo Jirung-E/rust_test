@@ -97,6 +97,12 @@ fn test_rectangle() {
 
     let square = Rectangle::square(10);
     println!("square: {:#?}", square);
+
+    println!("square is square? {}", square.is_square());
+    println!("rect1 is square? {}", rect1.is_square());
+
+    println!("square perimeter: {}", square.perimeter());
+    println!("rect1 perimeter: {}", rect1.perimeter());
 }
 
 #[derive(Debug)]
@@ -116,5 +122,13 @@ impl Rectangle {
 
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.length > other.length && self.width > other.width
+    }
+
+    fn is_square(&self) -> bool {
+        self.length == self.width
+    }
+
+    fn perimeter(&self) -> u32 {
+        (self.width + self.length) * 2
     }
 }

@@ -10,3 +10,8 @@ Book:
 - [x] struct
 - [x] enum
 - [x] pattern matching
+- [x] module
+- [ ] collections
+- [ ] error handling
+- [ ] generic
+- [ ] trait

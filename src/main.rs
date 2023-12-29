@@ -1,10 +1,7 @@
-mod samples;
-use samples::restaurant;
-use samples::pyramid;
+mod tests;
+use tests::collection_test;
 
 fn main() {
     println!("\n--------------------------------------------\n");
-    restaurant::test();
-    println!("\n--------------------------------------------\n");
-    pyramid::test();
+    collection_test::test();
 }

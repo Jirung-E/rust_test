@@ -12,6 +12,9 @@ Book:
 - [x] pattern matching
 - [x] module
 - [ ] collections
+  + [x] Vec
+  + [ ] String
+  + [ ] HashMap
 - [ ] error handling
 - [ ] generic
 - [ ] trait

@@ -1,7 +1,9 @@
-mod tests;
-use tests::collection_test;
+// mod tests;
+// use tests::collection_test;
+mod samples;
+use samples::rectangles;
 
 fn main() {
     println!("\n--------------------------------------------\n");
-    collection_test::test();
+    rectangles::test();
 }

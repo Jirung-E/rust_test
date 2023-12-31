@@ -16,5 +16,6 @@ Book:
   + [ ] String
   + [ ] HashMap
 - [ ] error handling
-- [ ] generic
-- [ ] trait
+- [x] generic
+- [x] trait
+- [ ] life time

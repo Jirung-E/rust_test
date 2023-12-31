@@ -1,9 +1,9 @@
-// mod tests;
-// use tests::collection_test;
-mod samples;
-use samples::rectangles;
+mod tests;
+use tests::generic_test;
+use tests::trait_test;
 
 fn main() {
-    println!("\n--------------------------------------------\n");
-    rectangles::test();
+    generic_test::test();
+    println!("\n----------------------------------------------------------\n");
+    trait_test::test();
 }

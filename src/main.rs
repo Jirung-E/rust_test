@@ -1,9 +1,6 @@
-mod tests;
-use tests::generic_test;
-use tests::trait_test;
+mod samples;
+use samples::math;
 
 fn main() {
-    generic_test::test();
-    println!("\n----------------------------------------------------------\n");
-    trait_test::test();
+    math::test();
 }

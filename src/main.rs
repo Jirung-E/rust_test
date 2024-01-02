@@ -1,6 +1,6 @@
 mod samples;
-use samples::math;
+use samples::iot as module;
 
 fn main() {
-    math::test();
+    module::test();
 }

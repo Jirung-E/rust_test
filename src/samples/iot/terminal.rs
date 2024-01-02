@@ -37,18 +37,21 @@ impl Terminal for TerminalNode {
 
         self.shutdown = false;
 
-        let item_count = rand::thread_rng().gen_range(100..700);
-        let mut loaded_item_count = 0;
         let bar_length = 50;
+        for _ in 0..5 {
+            let item_count = rand::thread_rng().gen_range(100..700);
+            let mut loaded_item_count = 0;
 
-        while loaded_item_count < item_count {
-            loaded_item_count += 1;
+            while loaded_item_count < item_count {
+                loaded_item_count += 1;
 
-            let loaded_bar_length = loaded_item_count * bar_length / item_count;
-            let bar = format!("{}{}", "=".repeat(loaded_bar_length), " ".repeat(bar_length - loaded_bar_length));
-            // print!("\r {} / {} [ {} ] {:.1}%", loaded_item_count, item_count, bar, loaded_item_count as f64 * 100.0 / item_count as f64);
-            print!("\r {} / {} [ {} ] {:.1}%", loaded_item_count, item_count, bar, loaded_item_count as f64 * 100.0 / item_count as f64);
-            sleep(std::time::Duration::from_millis(1));
+                let loaded_bar_length = loaded_item_count * bar_length / item_count;
+                let bar = format!("{}{}", "=".repeat(loaded_bar_length), " ".repeat(bar_length - loaded_bar_length));
+                // print!("\r {} / {} [ {} ] {:.1}%", loaded_item_count, item_count, bar, loaded_item_count as f64 * 100.0 / item_count as f64);
+                print!("\r {} / {} [{}] {:.1}%", loaded_item_count, item_count, bar, loaded_item_count as f64 * 100.0 / item_count as f64);
+                sleep(std::time::Duration::from_millis(5));
+            }
+            println!();
         }
 
         println!("\n{} successfully executed", id);

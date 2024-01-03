@@ -11,9 +11,6 @@ pub fn test() {
     let mut h1 = Hub::new(0x01, "IOT Hub 1");
     let mut h2 = Hub::new(0x02, "IOT Hub 2");
 
-    hub.connect_device(h1);
-    h1.connect_device(h2);
-
     let l1 = Terminal::new(0x06008742, "IOT Light1");
     let l2 = Terminal::new(0x06008742, "IOT Light 2");
     let l3 = Terminal::new(0x06008742, "IOT Light 3");
@@ -27,6 +24,10 @@ pub fn test() {
     h2.connect_device(l4);
     hub.connect_device(s1);
     hub.connect_device(s2);
+
+    h1.connect_device(h2);
+    hub.connect_device(h1);
+
 
     hub.execute();
 

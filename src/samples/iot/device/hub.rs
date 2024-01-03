@@ -5,8 +5,8 @@ pub struct Hub {
 }
 
 impl Hub {
-    pub fn new(id: u32, name: &str) -> Hub {
-        Hub { core: Core::new(id, name) }
+    pub fn new(id: u32, name: &str) -> Box<Hub> {
+        Box::new(Hub { core: Core::new(id, name) })
     }
 }
 

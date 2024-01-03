@@ -8,8 +8,8 @@ pub struct Terminal {
 }
 
 impl Terminal {
-    pub fn new(id: u32, name: &str) -> Terminal {
-        Terminal { core: Core::new(id, name) }
+    pub fn new(id: u32, name: &str) -> Box<Terminal> {
+        Box::new(Terminal { core: Core::new(id, name) })
     }
 }
 

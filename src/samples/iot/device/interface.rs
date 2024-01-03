@@ -22,9 +22,9 @@ pub trait Interface {
     fn status(&self) -> String {
         let mut result = format!("{}(0x{:0x}) ", self.get_name(), self.get_id());
         if self.is_running() {
-            result += "[shutdown]";
-        } else {
             result += "[running]";
+        } else {
+            result += "[stopped]"
         }
         result
     }

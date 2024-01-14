@@ -12,22 +12,22 @@ pub fn test() {
     let mut h2 = Hub::new(0x02, "IOT Hub 2");
 
     let l1 = Terminal::new(0x06008742, "IOT Light1");
-    let l2 = Terminal::new(0x06008742, "IOT Light 2");
-    let l3 = Terminal::new(0x06008742, "IOT Light 3");
-    let l4 = Terminal::new(0x06008742, "IOT Light 4");
+    let l2 = Terminal::new(0x06008745, "IOT Light 2");
+    let l3 = Terminal::new(0x06008791, "IOT Light 3");
+    let l4 = Terminal::new(0x06008824, "IOT Light 4");
     let s1 = Terminal::new(0x54106418, "Switch 1");
-    let s2 = Terminal::new(0x54106418, "Switch 2");
+    let s2 = Terminal::new(0x54106470, "Switch 2");
 
     hub.connect_device(l1);
     h1.connect_device(l2);
     h1.connect_device(l3);
     h2.connect_device(l4);
-    hub.connect_device(s1);
-    hub.connect_device(s2);
 
     h1.connect_device(h2);
     hub.connect_device(h1);
 
+    hub.connect_device(s1);
+    hub.connect_device(s2);
 
     hub.execute();
 

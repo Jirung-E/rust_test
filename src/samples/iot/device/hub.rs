@@ -1,7 +1,7 @@
 use super::{ Interface, Core };
 
 pub struct Hub {
-    core: Core
+    pub core: Core
 }
 
 impl Hub {

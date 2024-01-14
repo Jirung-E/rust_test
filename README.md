@@ -2,7 +2,7 @@
 Book:
 > $ rustup docs --book   
 
-[Book 한국어](https://rinthel.github.io/rust-lang-book-ko/foreword.html)
+[Book 한국어](https://doc.rust-kr.org/)
 
 - [x] ownership
 - [x] reference
@@ -13,9 +13,9 @@ Book:
 - [x] module
 - [ ] collections
   + [x] Vec
-  + [ ] String
+  + [x] String
   + [ ] HashMap
 - [ ] error handling
 - [x] generic
 - [x] trait
-- [ ] life time
+- [ ] lifetime

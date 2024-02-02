@@ -9,3 +9,4 @@ pub mod collection_test;
 pub mod generic_test;
 pub mod trait_test;
 pub mod error_handling_test;
+pub mod functional;

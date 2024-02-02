@@ -11,10 +11,10 @@ Book:
 - [x] enum
 - [x] pattern matching
 - [x] module
-- [ ] collections
+- [x] collections
   + [x] Vec
   + [x] String
-  + [ ] HashMap
+  + [x] HashMap
 - [ ] error handling
 - [x] generic
 - [x] trait

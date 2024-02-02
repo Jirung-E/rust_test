@@ -8,3 +8,4 @@ pub mod module_test;
 pub mod collection_test;
 pub mod generic_test;
 pub mod trait_test;
+pub mod functional;

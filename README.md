@@ -15,7 +15,7 @@ Book:
   + [x] Vec
   + [x] String
   + [x] HashMap
-- [ ] error handling
+- [x] error handling
 - [x] generic
 - [x] trait
 - [ ] lifetime

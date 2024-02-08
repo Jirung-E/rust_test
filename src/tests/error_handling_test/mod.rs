@@ -21,7 +21,53 @@ pub fn test() {
     // let file4 = File::open("test4.txt").unwrap();
     // let file5 = File::open("hello.txt")
     //     .expect("hello.txt should be included in this project");
+
+    // read_username_from_file_1();
+    // read_username_from_file_2();
+    // read_username_from_file_3();
+    // read_username_from_file_4();
+    // println!("{}", last_char_of_first_line("hello\nworld").unwrap());
+
+    guess_test();
 }
+
+
+fn guess_test() {
+    struct Guess {
+        value: i32      // private
+    }
+
+    impl Guess {
+        fn new(value: i32) -> Guess {
+            if value < 1 || value > 100 {
+                panic!("Guess value must be between 1 and 100, got {value}.");
+            }
+            Guess { value }
+        }
+
+        fn value(&self) -> i32 {
+            self.value
+        }
+    }
+
+    let g1 = Guess::new(10);
+    println!("g1.value: {}", g1.value());
+    // let g2 = Guess::new(101);
+
+}
+
+
+fn expect_test() {
+    use std::net::IpAddr;
+
+    let home: IpAddr = "127.0.0.1"
+        .parse()
+        .expect("Hardcoded IP address should be valid");
+    println!("{home}");
+
+
+}
+
 
 fn get_file_1(file_name: &str) -> File {
     let greeting_file_result = File::open(file_name);

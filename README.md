@@ -18,4 +18,5 @@ Book:
 - [x] error handling
 - [x] generic
 - [x] trait
-- [ ] lifetime
+- [x] lifetime
+- [ ] test

@@ -10,6 +10,7 @@ pub fn test() {
     struct_test();
 
     let s: &'static str = "hello world!";
+    println!("{s}");
 
     test_all();
 }

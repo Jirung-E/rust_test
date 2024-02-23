@@ -1,7 +1,7 @@
 mod samples;
 mod tests;
 
-use tests::lifetime_test as module;
+use tests::functional as module;
 
 
 fn main() {

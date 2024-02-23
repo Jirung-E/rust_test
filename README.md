@@ -19,4 +19,7 @@ Book:
 - [x] generic
 - [x] trait
 - [x] lifetime
-- [ ] test
+- [x] test
+- [x] functional
+  + [x] closure
+  + [x] iterator

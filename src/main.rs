@@ -1,7 +1,7 @@
 mod samples;
 mod tests;
 
-use tests::functional as module;
+use tests::pointer_test as module;
 
 
 fn main() {

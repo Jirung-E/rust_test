@@ -2,10 +2,12 @@ pub fn test() {
     let c = CustomSmartPointer {
         data: String::from("my stuff"),
     };
+    drop(c);
     let d = CustomSmartPointer {
         data: String::from("other stuff")
     };
     println!("CustomSmartPointers created.");
+
 }
 
 struct CustomSmartPointer {

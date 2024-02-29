@@ -1,3 +1,4 @@
+#[allow(unused_variables)]
 pub fn test() {
     let c = CustomSmartPointer {
         data: String::from("my stuff"),

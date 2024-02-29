@@ -1,3 +1,4 @@
+#[allow(unused_variables)]
 pub fn test() {
     println!(" [ Rc test ] ");
 

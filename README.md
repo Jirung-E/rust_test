@@ -9,7 +9,7 @@ Book:
 - [x] slice
 - [x] struct
 - [x] enum
-- [x] pattern matching
+- [x] match
 - [x] module
 - [x] collections
   + [x] Vec
@@ -23,3 +23,12 @@ Book:
 - [x] functional
   + [x] closure
   + [x] iterator
+- [x] smart pointer
+  + [x] Box
+  + [x] Rc
+  + [x] RefCell
+  + [x] Weak
+  + [x] Deref trait
+  + [x] Drop trait
+- [ ] Concurrency
+- [ ] OOP features

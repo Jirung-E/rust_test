@@ -13,3 +13,4 @@ pub mod functional;
 pub mod lifetime_test;
 pub mod pointer_test;
 pub mod oop_test;
+pub mod concurrency_test;

@@ -1,9 +1,18 @@
 mod gui;
-use gui::{Button, SelectBox, Screen};
+mod blog;
 
 
 pub fn test() {
     println!(" [ oop test ] ");
+
+    blog_test();
+}
+
+
+fn polymorphism() {
+    use gui::{Button, SelectBox, Screen};
+
+    println!(" [ polymorphism ] ");
 
     let screen = Screen {
         components: vec![
@@ -25,4 +34,21 @@ pub fn test() {
     };
 
     screen.run();
+}
+
+fn blog_test() {
+    use blog::Post;
+
+    println!(" [ design pattern test ] ");
+
+    let mut post = Post::new();
+
+    post.add_text("I ate a salad for lunch today");
+    assert_eq!("", post.content());
+
+    post.request_review();
+    assert_eq!("", post.content());
+
+    post.approve();
+    assert_eq!("I ate a salad for lunch today", post.content());
 }

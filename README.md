@@ -31,5 +31,5 @@ Book:
   + [x] Deref trait
   + [x] Drop trait
 - [ ] Concurrency
-- [ ] OOP features
+- [x] OOP features
   + [x] Polymorphism

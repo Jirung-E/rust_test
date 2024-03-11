@@ -32,3 +32,4 @@ Book:
   + [x] Drop trait
 - [ ] Concurrency
 - [ ] OOP features
+  + [x] Polymorphism

@@ -12,3 +12,4 @@ pub mod error_handling_test;
 pub mod functional;
 pub mod lifetime_test;
 pub mod pointer_test;
+pub mod oop_test;

@@ -1,12 +1,16 @@
+use std::sync::mpsc;
 use std::thread;
 
 pub fn test() {
     println!(" [ concurrency test ] ");
 
-    let v = vec![1, 2, 3];
-    let handle = thread::spawn(move || {
-        println!("{:?}", v);
+    let (tx, rx) = mpsc::channel();
+
+    thread::spawn(move || {
+        let val = String::from("hi");
+        tx.send(val).unwrap();
     });
 
-    handle.join().unwrap();
+    let received = rx.recv().unwrap();
+    println!("Got: {}", received);
 }

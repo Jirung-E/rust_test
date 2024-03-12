@@ -31,5 +31,8 @@ Book:
   + [x] Deref trait
   + [x] Drop trait
 - [ ] Concurrency
+  + [x] thread
+  + [x] message passing
+  + [ ] Mutex
 - [x] OOP features
   + [x] Polymorphism

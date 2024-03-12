@@ -1,9 +1,17 @@
 use std::sync::mpsc;
 use std::thread;
 use std::time::Duration;
+use std::sync::Mutex;
+use std::rc::Rc;
 
 pub fn test() {
     println!(" [ concurrency test ] ");
+
+    mutex_test();
+}
+
+fn message_passing() {
+    println!(" [ message passing ] ");
 
     let (tx, rx) = mpsc::channel();
 
@@ -39,4 +47,26 @@ pub fn test() {
     for received in rx {
         println!("Got: {}", received);
     }
+}
+
+fn mutex_test() {
+    println!(" [ mutex test ] ");
+
+    let counter = Rc::new(Mutex::new(0));
+    let mut handles = vec![];
+
+    for _ in 0..10 {
+        let counter = Rc::clone(&counter);
+        let handle = thread::spawn(move || {
+            let mut num = counter.lock().unwrap();
+            *num += 1;
+        });
+        handles.push(handle);
+    }
+
+    for handle in handles {
+        handle.join().unwrap();
+    }
+
+    println!("Result: {}", *counter.lock().unwrap());
 }

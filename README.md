@@ -30,9 +30,10 @@ Book:
   + [x] Weak
   + [x] Deref trait
   + [x] Drop trait
-- [ ] Concurrency
+- [x] Concurrency
   + [x] thread
   + [x] message passing
-  + [ ] Mutex
+  + [x] Mutex
+  + [x] Arc
 - [x] OOP features
   + [x] Polymorphism

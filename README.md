@@ -37,3 +37,8 @@ Book:
   + [x] Arc
 - [x] OOP features
   + [x] Polymorphism
+- [x] Pattern and matching
+  + [x] _
+  + [x] ..
+  + [x] @
+  + [x] match guard

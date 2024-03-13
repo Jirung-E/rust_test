@@ -1,7 +1,7 @@
 mod samples;
 mod tests;
 
-use tests::concurrency_test as module;
+use tests::pattern_and_matching as module;
 
 
 fn main() {

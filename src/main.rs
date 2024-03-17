@@ -1,7 +1,7 @@
 mod samples;
 mod tests;
 
-use tests::trait_test as module;
+use tests::advanced_types as module;
 
 
 fn main() {

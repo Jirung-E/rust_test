@@ -47,4 +47,8 @@ Book:
   + [x] FFI
   + [x] static(global) variable
   + [ ] union
-  + 
+  + [x] advanced trait
+    + [x] overloading
+    + [x] fully qualified syntax
+    + [x] super trait
+    + [x] newtype pattern

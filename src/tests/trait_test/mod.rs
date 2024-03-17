@@ -1,8 +1,18 @@
 mod summarizable;
+mod overloading;
+mod fully_qualified_syntax;
+mod super_trait;
+mod newtype_pattern;
+
+pub fn test() {
+    newtype_pattern::test();
+}
+
+
 use summarizable::Summarizable;
 use std::cmp::PartialOrd;
 
-pub fn test() {
+fn trait_test() {
     println!(" [ trait test ] ");
 
     let tweet = Tweet {

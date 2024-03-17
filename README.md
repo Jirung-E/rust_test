@@ -52,3 +52,11 @@ Book:
     + [x] fully qualified syntax
     + [x] super trait
     + [x] newtype pattern
+  + [x] advanced type
+    + [x] type alias
+    + [x] never type
+    + [x] dynamically sized type
+  + [x] advanced function
+    + [x] function pointer
+    + [x] returns closure
+  + [ ] macro

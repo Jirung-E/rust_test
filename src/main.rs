@@ -1,7 +1,7 @@
 mod samples;
 mod tests;
 
-use tests::advanced_types as module;
+use tests::advanced_functions_closures as module;
 
 
 fn main() {

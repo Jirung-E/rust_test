@@ -17,3 +17,4 @@ pub mod concurrency_test;
 pub mod pattern_and_matching;
 pub mod unsafe_test;
 pub mod advanced_types;
+pub mod advanced_functions_closures;

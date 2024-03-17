@@ -42,3 +42,9 @@ Book:
   + [x] ..
   + [x] @
   + [x] match guard
+- [ ] advanced features
+  + [x] unsafe
+  + [x] FFI
+  + [x] static(global) variable
+  + [ ] union
+  + 

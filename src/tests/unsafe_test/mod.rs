@@ -14,6 +14,10 @@ pub fn test() {
         println!("{:?}", a);
         println!("{:?}", b);
     }
+
+    unsafe {
+        println!("Absolute value of -3 according to C: {}", abs(-3));
+    }
 }
 
 use std::slice;
@@ -30,4 +34,8 @@ fn split_at_mut(values: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
             slice::from_raw_parts_mut(ptr.add(mid), len - mid),
         )
     }
+}
+
+extern "C" {
+    fn abs(input: i32) -> i32;
 }
